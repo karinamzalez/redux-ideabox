@@ -14,7 +14,7 @@
 
 import React, { Component } from 'react';
 
-import Header from 'components/HeaderWrapper.js';
+import Header from 'components/Header';
 
 class App extends Component {
   render() {
@@ -27,7 +27,7 @@ class App extends Component {
   }
 }
 
-static propTypes = {
+App.propTypes = {
   children: React.PropTypes.node,
 };
 
