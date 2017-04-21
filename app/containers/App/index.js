@@ -10,6 +10,7 @@
  * reloading is not a necessity for you then you can refactor it and remove
  * the linting exception.
  */
+ /*jshint esversion: 6 */
 
 import React from 'react';
 
