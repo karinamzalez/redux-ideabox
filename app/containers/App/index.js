@@ -12,19 +12,23 @@
  */
  /*jshint esversion: 6 */
 
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+import Header from 'components/HeaderWrapper.js';
 
-  static propTypes = {
-    children: React.PropTypes.node,
-  };
-
+class App extends Component {
   render() {
     return (
       <div>
+        <Header />
         {React.Children.toArray(this.props.children)}
       </div>
     );
   }
 }
+
+static propTypes = {
+  children: React.PropTypes.node,
+};
+
+export default App;
