@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl';
 
 import messages from './messages';
 
-const TopSection = () => {
+const IdeasList = () => {
   return (
     <div>
       <h1><FormattedMessage {...messages.title} /></h1>
@@ -13,4 +13,4 @@ const TopSection = () => {
   );
 };
 
-export default Header;
+export default IdeasList;
