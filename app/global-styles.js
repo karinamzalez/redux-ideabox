@@ -39,4 +39,13 @@ injectGlobal`
   span {
     color: #6d6e71;
   }
+
+  input {
+    border: 2px solid #d1d3d4;
+    font-size: 1em;
+    height: 30px;
+    margin-bottom: 15px;
+    max-width: 500px;
+    width: 100%;
+  }
 `;
