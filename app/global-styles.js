@@ -46,6 +46,26 @@ injectGlobal`
     height: 30px;
     margin-bottom: 15px;
     max-width: 500px;
+    min-width: 500px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .submit-btn {
+    background: #00a79d;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
+    height: 35px;
+    margin-bottom: 5px;
+    max-width: 500px;
     width: 100%;
   }
+
+  .submit-btn:hover {
+    background: #045e55;
+  }
+
+
 `;

@@ -8,14 +8,11 @@ const InputForm = (props) => {
     <Wrapper>
       <h1>idea<span>box</span></h1>
       <form>
-        <div>
-          <input type="text" id="idea-title" placeholder="title" />
-        </div>
-        <div>
-          <input type="text" id="idea-body" placeholder="body" />
-        </div>
+        <input type="text" id="idea-title" placeholder=" title" />
+        <input type="text" id="idea-body" placeholder=" body" />
+        <br />
         <button type="submit" className="submit-btn" onClick={(e) => props.addIdea(props.titleString, props.bodyString, e)} >
-          Create Idea
+          Save
         </button>
       </form>
     </Wrapper>
