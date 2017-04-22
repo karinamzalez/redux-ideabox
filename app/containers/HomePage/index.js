@@ -14,12 +14,14 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import messages from './messages';
+import InputForm from 'components/InputForm';
 
 
 class HomePage extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
+        <InputForm />
       </div>
     );
   }

@@ -18,7 +18,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        ideaBox
         {React.Children.toArray(this.props.children)}
       </div>
     );
