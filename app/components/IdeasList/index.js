@@ -5,11 +5,11 @@ import { FormattedMessage } from 'react-intl';
 
 import messages from './messages';
 
-const Header = () => {
+const TopSection = () => {
   return (
-    <header>
+    <div>
       <h1><FormattedMessage {...messages.title} /></h1>
-    </header>
+    <div>
   );
 };
 
