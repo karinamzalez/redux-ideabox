@@ -9,4 +9,7 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
+export const ADD_IDEA = 'ideabox/App/ADD_IDEA';
+export const TITLE_INPUT = 'ideabox/App/TITLE_INPUT';
+export const BODY_INPUT = 'ideabox/App/BODY_INPUT';
 export const DEFAULT_LOCALE = 'en';

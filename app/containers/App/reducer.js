@@ -1,5 +1,8 @@
 /*jshint esversion: 6 */
-import { combineReducers } from 'redux';
+import { fromJs } from 'immutable';
+
+
+const initialState =
 
 const ideas = (state = [], action) => {
   switch (action.type) {
