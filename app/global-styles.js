@@ -120,9 +120,7 @@ injectGlobal`
 
   footer p {
       align-items: center;
-      color: #6d6e71;
-      font-family: 'Roboto Slab', serif;
-      font-size: .75em;
+      font-size: 1em;
       left: 0;
   }
 

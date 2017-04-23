@@ -21,6 +21,9 @@ const IdeasList = (props) => {
                   </header>
                   <p>{idea.body}</p>
                   <footer>
+                  <button>up</button>
+                  <button>down</button>
+                  <p>quality: <span>{idea.quality}</span> </p>
                   </footer>
                 </li>
         })

@@ -2,6 +2,8 @@
 import {
   ADD_IDEA,
   REMOVE_IDEA,
+  UPVOTE_IDEA,
+  DOWNVOTE_IDEA,
 } from './constants';
 
 export const addIdea = (ideaObject) => {
@@ -14,6 +16,13 @@ export const addIdea = (ideaObject) => {
 export const removeIdea = (index) => {
   return {
     type: REMOVE_IDEA,
+    index: index,
+  };
+};
+
+export const upvoteIdea = (index) => {
+  return {
+    type: UPVOTE_IDEA,
     index: index,
   };
 };

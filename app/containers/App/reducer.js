@@ -3,7 +3,9 @@ import { fromJS, List } from 'immutable';
 
 import {
   ADD_IDEA,
-  REMOVE_IDEA
+  REMOVE_IDEA,
+  UPVOTE_IDEA,
+  DOWNVOTE_IDEA,
 } from './constants';
 
 const initialState = fromJS({
