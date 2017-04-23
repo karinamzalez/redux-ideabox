@@ -4,14 +4,9 @@ import { createSelector } from 'reselect';
 
 const selectGlobal = (state) => state.get('global');
 
-const makeSelectTitle = () => createSelector(
+const makeSelectIdeas = () => createSelector(
   selectGlobal,
-  (globalState) => globalState.get('titleString')
-);
-
-const makeSelectBody = () => createSelector(
-  selectGlobal,
-  (globalState) => globalState.get('bodyString')
+  (globalState) => globalState.get('ideas')
 );
 
 const makeSelectLocationState = () => {
@@ -33,6 +28,5 @@ const makeSelectLocationState = () => {
 export {
   selectGlobal,
   makeSelectLocationState,
-  makeSelectBody,
-  makeSelectTitle,
+  makeSelectIdeas,
 };

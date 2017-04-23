@@ -5,30 +5,16 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import InputForm from 'components/InputForm';
-import { makeSelectTitle, makeSelectBody } from 'containers/App/selectors';
-import { updateTitleInput, updateBodyInput, addIdea } from '../App/actions';
+import { addIdea } from '../App/actions';
+import { makeSelectIdeas } from '../App/selectors';
 
 const mapStateToProps = createStructuredSelector({
-  titleString: makeSelectTitle(),
-  bodyString: makeSelectBody(),
+  ideas: makeSelectIdeas()
 });
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateTitleInput: (titleString) => {
-      dispatch(updateTitleInput(titleString));
-    },
-    updateBodyInput: (bodyString) => {
-      dispatch(updateBodyInput(bodyString));
-    },
-    addIdea: (titleString, bodyString, e) => {
-      e.preventDefault();
-      const ideaObject = {
-        title: titleString,
-        body: bodyString,
-        quality: 'swill',
-        id: Date.now()
-      };
+    addIdea: (ideaObject) => {
       dispatch(addIdea(ideaObject));
     }
   };

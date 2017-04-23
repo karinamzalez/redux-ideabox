@@ -8,8 +8,8 @@ import messages from './messages';
 const IdeasList = () => {
   return (
     <div>
-      <h1><FormattedMessage {...messages.title} /></h1>
-    <div>
+      <h1>apple</h1>
+    </div>
   );
 };
 

@@ -11,7 +11,7 @@ for a good explanation of the more intricate benefits it has.
 
 In our reducers, we make the initial state an immutable data structure with the
 `fromJS` function. We pass it an object or an array, and it takes care of
-converting it to a immutable data structure. (Note: the conversion is performed deeply so
+converting it to an immutable data structure. (Note: the conversion is performed deeply so
 that even arbitrarily nested arrays/objects are immutable structures too!)
 
 ```JS
@@ -89,7 +89,7 @@ Now, if you want to access `myData`, you can just write `state.myData` in your r
 
 ### Gotchas of Using Records
 
-Although dot notation can now be used to read properties the same does not apply to setting properties. Any attempts to set a property on a `Record` using dot notation will result in errors. 
+Although dot notation can now be used to read properties the same does not apply to setting properties. Any attempts to set a property on a `Record` using dot notation will result in errors.
 Instead setter methods ( `.set`, `.update`, `.merge`) should be used.
 
 Certain properties can not be set on a record as they would conflict with the API. Consider the below example:
