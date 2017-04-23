@@ -2,16 +2,16 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import InputForm from 'components/InputForm';
-import { updateTitleInput, updateBodyInput, addIdea } from 'actions.js';
+import { makeSelectTitle, makeSelectBody } from 'containers/App/selectors';
+import { updateTitleInput, updateBodyInput, addIdea } from '../App/actions';
 
-const mapStateToProps = state => {
-  return {
-    titleString: state.inputs.titleString,
-    bodyString: state.inputs.bodyString
-  };
-};
+const mapStateToProps = createStructuredSelector({
+  titleString: makeSelectTitle(),
+  bodyString: makeSelectBody(),
+});
 
 const mapDispatchToProps = dispatch => {
   return {

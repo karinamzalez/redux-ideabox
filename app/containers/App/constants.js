@@ -8,6 +8,7 @@
  * Follow this format:
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
+ /*jshint esversion: 6 */
 
 export const ADD_IDEA = 'ideabox/App/ADD_IDEA';
 export const TITLE_INPUT = 'ideabox/App/TITLE_INPUT';
