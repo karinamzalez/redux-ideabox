@@ -6,7 +6,7 @@ const selectGlobal = (state) => state.get('global');
 
 const makeSelectIdeas = () => createSelector(
   selectGlobal,
-  (globalState) => globalState.get('ideas')
+  (globalState) => globalState.get('ideas').toJS()
 );
 
 const makeSelectLocationState = () => {

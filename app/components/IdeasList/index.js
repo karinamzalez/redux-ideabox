@@ -5,10 +5,12 @@ import { FormattedMessage } from 'react-intl';
 
 import messages from './messages';
 
-const IdeasList = () => {
+const IdeasList = (props) => {
+  // const { ideas } = props;
+  console.log(props.ideas);
   return (
     <div>
-      <h1>apple</h1>
+      {props.ideas[0] ? props.ideas[0].title : props.ideas}
     </div>
   );
 };
