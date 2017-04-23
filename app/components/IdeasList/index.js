@@ -4,15 +4,30 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import messages from './messages';
+import Ul from './Ul';
 
 const IdeasList = (props) => {
-  // const { ideas } = props;
-  console.log(props.ideas);
+  const { ideas, removeIdea } = props;
+
   return (
-    <div>
-      {props.ideas[0] ? props.ideas[0].title : props.ideas}
-    </div>
-  );
+    <Ul styleClass="idea-list">
+      {
+        ideas.length ?
+        ideas.map((idea, i) => {
+          return <li key={i}>
+                  <header>
+                    <h2>{idea.title}</h2>
+                    <button className="remove" onClick={ () => removeIdea(i) }>X</button>
+                  </header>
+                  <p>{idea.body}</p>
+                  <footer>
+                  </footer>
+                </li>
+        })
+        : "blerp"
+      }
+    </Ul>
+  )
 };
 
 export default IdeasList;

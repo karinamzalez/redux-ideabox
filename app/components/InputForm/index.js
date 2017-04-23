@@ -38,6 +38,7 @@ export default class InputForm extends React.Component{
           <form>
             <input type="text" id="idea-title"
             placeholder=" title" onChange={ (e) => this.setIdeaState('titleString', e.target.value) } />
+            <br />
             <input type="text" id="idea-body"
             placeholder=" body" onChange={(e) => this.setIdeaState('bodyString', e.target.value)}/>
             <br />
@@ -47,7 +48,7 @@ export default class InputForm extends React.Component{
             </button>
           </form>
         </Wrapper>
-        <IdeasList ideas={ this.props.ideas } />
+        <IdeasList ideas={ this.props.ideas } removeIdea={ this.props.removeIdea } />
       </div>
     );
   }
@@ -55,4 +56,5 @@ export default class InputForm extends React.Component{
 
 InputForm.PropTypes = {
   addIdea: React.PropTypes.func,
+  removeIdea: React.PropTypes.func,
 }

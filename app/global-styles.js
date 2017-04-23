@@ -67,5 +67,63 @@ injectGlobal`
     background: #045e55;
   }
 
+  li {
+      justify-content: center;
+      max-width: 500px;
+      width: 100%;
+  }
+
+  li header {
+      margin-top: 25px;
+  }
+
+  li h2 {
+      color: #6d6e71;
+      display: inline;
+      font-size: 1.5em;
+      font-weight: 700;
+  }
+
+  li p {
+      color: #939598;
+      margin: 15px 0px;
+  }
+
+  .remove {
+      background: url(./images/delete.svg) no-repeat;
+      border: none;
+      display: inline;
+      float: right;
+      height: 30px;
+      justify-content: right;
+      width: 30px;
+  }
+
+  .remove:hover {
+      background: url(./images/delete-hover.svg) no-repeat;
+      height: 30px;
+      width: 30px;
+  }
+
+  footer {
+    align-items: center;
+    border-bottom: 2px solid #d1d3d4;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+
+  footer button {
+      display: inline-block;
+      float: left;
+  }
+
+  footer p {
+      align-items: center;
+      color: #6d6e71;
+      font-family: 'Roboto Slab', serif;
+      font-size: .75em;
+      left: 0;
+  }
 
 `;

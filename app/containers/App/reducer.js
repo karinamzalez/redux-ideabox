@@ -3,6 +3,7 @@ import { fromJS, List } from 'immutable';
 
 import {
   ADD_IDEA,
+  REMOVE_IDEA
 } from './constants';
 
 const initialState = fromJS({
@@ -10,14 +11,14 @@ const initialState = fromJS({
 });
 
 const ideas = (state = initialState, action) => {
+  console.log(action);
   switch (action.type) {
     case ADD_IDEA:
       return state
         .set('ideas', state.get('ideas').push(action.ideaObject));
-    case 'REMOVE_IDEA':
-      return state.filter(
-        idea => idea.id !== action.id
-      );
+    case REMOVE_IDEA:
+      return state
+        .set('ideas', state.get('ideas').delete(action.index));
     default:
       return state;
   }

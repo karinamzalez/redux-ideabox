@@ -11,4 +11,5 @@
  /*jshint esversion: 6 */
 
 export const ADD_IDEA = 'ideabox/App/ADD_IDEA';
+export const REMOVE_IDEA = 'ideabox/App/REMOVE_IDEA';
 export const DEFAULT_LOCALE = 'en';

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import InputForm from 'components/InputForm';
-import { addIdea } from '../App/actions';
+import { addIdea, removeIdea } from '../App/actions';
 import { makeSelectIdeas } from '../App/selectors';
 
 const mapStateToProps = createStructuredSelector({
@@ -16,6 +16,9 @@ const mapDispatchToProps = dispatch => {
   return {
     addIdea: (ideaObject) => {
       dispatch(addIdea(ideaObject));
+    },
+    removeIdea: (index) => {
+      dispatch(removeIdea(index));
     }
   };
 };
