@@ -10,6 +10,17 @@ import Ul from './Ul';
 const IdeasList = (props) => {
   const { ideas, removeIdea, updateIdea } = props;
 
+  const upvote = (quality) => {
+    console.log(quality);
+    return quality === 'swill' ? 'good' : 'great';
+  };
+
+  const downvote = (quality) => {
+    console.log(quality);
+    return quality === 'great' ? 'good' : 'swill';
+  };
+
+
   return (
     <Ul styleClass="idea-list">
       {
@@ -32,8 +43,13 @@ const IdeasList = (props) => {
                     disabled={ false }
                     onChange={ (e) => updateIdea(i, idea['body'] = e.target.value)} />
                   <footer>
-                    <button className="up">&uarr;</button>
-                    <button className="down">&darr;</button>
+                    <button
+                      className="up"
+                      onClick={ () => updateIdea(i, idea['quality'] = upvote(idea.quality))}>&uarr;
+                    </button>
+                    <button
+                      className="down"
+                      onClick={ () => updateIdea(i, idea['quality'] = downvote(idea.quality))}>&darr;</button>
                     <p>quality: <span>{idea.quality}</span> </p>
                   </footer>
                 </li>
