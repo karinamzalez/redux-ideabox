@@ -5,8 +5,6 @@ import {
   ADD_IDEA,
   REMOVE_IDEA,
   UPDATE_IDEA,
-  UPVOTE_IDEA,
-  DOWNVOTE_IDEA,
 } from './constants';
 
 const initialState = fromJS({
@@ -24,6 +22,7 @@ const ideas = (state = initialState, action) => {
     case UPDATE_IDEA:
       state
       .set('ideas',  state.get('ideas').get(action.index)[action.key] = action.value);
+      return state;
     default:
       return state;
   }

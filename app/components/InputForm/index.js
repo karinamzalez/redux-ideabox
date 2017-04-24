@@ -19,6 +19,10 @@ export default class InputForm extends React.Component {
     });
   }
 
+  clearFields(){
+    this.setState({titleString: '', bodyString: ''});
+  }
+
   createIdea(e) {
     e.preventDefault();
     const ideaObject = {
@@ -31,10 +35,6 @@ export default class InputForm extends React.Component {
     this.clearFields();
   }
 
-  clearFields(){
-    this.setState({titleString: '', bodyString: ''});
-  }
-  
   render(){
     return (
       <div>
@@ -42,20 +42,23 @@ export default class InputForm extends React.Component {
           <h1>idea<span>box</span></h1>
           <form name="ideaForm">
             <input type="text" id="idea-title"
-            value={this.state.titleString}
-            placeholder=" title" onChange={ (e) => this.setIdeaState('titleString', e.target.value) } />
+              value={this.state.titleString}
+              placeholder=" title"
+              onChange={ (e) => this.setIdeaState('titleString', e.target.value) } />
             <br />
             <input type="text" id="idea-body"
-            placeholder=" body" value={this.state.bodyString} onChange={(e) => this.setIdeaState('bodyString', e.target.value)}/>
+              placeholder=" body"
+              value={this.state.bodyString}
+              onChange={(e) => this.setIdeaState('bodyString', e.target.value)}/>
             <br />
             <button className="submit-btn"
-            onClick={(e) => this.createIdea(e)}>
-            Save
+              onClick={(e) => this.createIdea(e)}>Save
             </button>
           </form>
         </Wrapper>
-        <IdeasList ideas={ this.props.ideas } removeIdea={ this.props.removeIdea }
-        updateIdea={ this.props.updateIdea } />
+        <IdeasList ideas={ this.props.ideas }
+          removeIdea={ this.props.removeIdea }
+          updateIdea={ this.props.updateIdea } />
       </div>
     );
   }

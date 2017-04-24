@@ -3,7 +3,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { reset } from 'redux-form';
 
 import InputForm from 'components/InputForm';
 import { addIdea, removeIdea, updateIdea } from '../App/actions';

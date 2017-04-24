@@ -13,6 +13,4 @@
 export const ADD_IDEA = 'ideabox/App/ADD_IDEA';
 export const REMOVE_IDEA = 'ideabox/App/REMOVE_IDEA';
 export const UPDATE_IDEA = 'ideabox/App/UPDATE_IDEA';
-export const UPVOTE_IDEA = 'ideabox/App/UPVOTE_IDEA';
-export const DOWNVOTE_IDEA = 'ideabox/App/DOWNVOTE_IDEA';
 export const DEFAULT_LOCALE = 'en';

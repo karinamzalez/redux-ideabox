@@ -3,8 +3,6 @@ import {
   ADD_IDEA,
   REMOVE_IDEA,
   UPDATE_IDEA,
-  UPVOTE_IDEA,
-  DOWNVOTE_IDEA,
 } from './constants';
 
 export const addIdea = (ideaObject) => {
