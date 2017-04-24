@@ -90,7 +90,8 @@ injectGlobal`
   }
 
   .remove {
-      background: url(./images/delete.svg) no-repeat;
+      background: grey;
+      color: white;
       border: none;
       display: inline;
       float: right;
@@ -98,10 +99,11 @@ injectGlobal`
       height: 30px;
       justify-content: right;
       width: 30px;
+      border-radius: 50px;
   }
 
   .remove:hover {
-      background: url(./images/delete-hover.svg) no-repeat;
+      background: #bd0f0f;
       height: 30px;
       width: 30px;
   }
@@ -114,9 +116,21 @@ injectGlobal`
     padding-bottom: 20px;
   }
 
+  .down:hover {
+    background-color: gold;
+  }
+
+  .up:hover {
+    background-color: green;
+  }
+
   footer button {
-      display: inline-block;
-      float: left;
+    background: grey;
+    color: white;
+    display: inline-block;
+    float: left;
+    border-radius: 50px;
+    margin-right: 20px;
   }
 
   footer p {

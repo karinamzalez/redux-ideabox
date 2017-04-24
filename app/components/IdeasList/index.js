@@ -32,13 +32,13 @@ const IdeasList = (props) => {
                     disabled={ false }
                     onChange={ (e) => updateIdea(i, idea['body'] = e.target.value)} />
                   <footer>
-                    <button>up</button>
-                    <button>down</button>
+                    <button className="up">&uarr;</button>
+                    <button className="down">&darr;</button>
                     <p>quality: <span>{idea.quality}</span> </p>
                   </footer>
                 </li>
         })
-        : "blerp"
+        : ""
       }
     </Ul>
   )
