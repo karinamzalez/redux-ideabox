@@ -35,14 +35,14 @@ export default class InputForm extends React.Component {
       <div>
         <Wrapper>
           <h1>idea<span>box</span></h1>
-          <form>
+          <form name="ideaForm">
             <input type="text" id="idea-title"
             placeholder=" title" onChange={ (e) => this.setIdeaState('titleString', e.target.value) } />
             <br />
             <input type="text" id="idea-body"
             placeholder=" body" onChange={(e) => this.setIdeaState('bodyString', e.target.value)}/>
             <br />
-            <button type="submit" className="submit-btn"
+            <button className="submit-btn"
             onClick={(e) => this.createIdea(e)}>
             Save
             </button>

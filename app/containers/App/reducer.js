@@ -22,8 +22,8 @@ const ideas = (state = initialState, action) => {
       return state
         .set('ideas', state.get('ideas').delete(action.index));
     case UPDATE_IDEA:
-      return state
-      .set('ideas', state.get('ideas'));
+      state
+      .set('ideas',  state.get('ideas').get(action.index)[action.key] = action.value);
     default:
       return state;
   }

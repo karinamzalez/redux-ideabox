@@ -21,10 +21,12 @@ export const removeIdea = (index) => {
   };
 };
 
-export const updateIdea = (index, ideaObject) => {
+export const updateIdea = (index, key, value) => {
+  console.log(value);
   return {
     type: UPDATE_IDEA,
     index: index,
-    ideaObject: ideaObject,
+    key: key,
+    value: value,
   };
 };

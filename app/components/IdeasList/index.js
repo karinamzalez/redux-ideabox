@@ -20,7 +20,6 @@ const IdeasList = (props) => {
     return quality === 'great' ? 'good' : 'swill';
   };
 
-
   return (
     <Ul styleClass="idea-list">
       {
@@ -32,7 +31,7 @@ const IdeasList = (props) => {
                       <ContentEditable
                         html={ idea.title }
                         disabled={ false }
-                        onChange={ (e) => updateIdea(i, idea['title'] = e.target.value)} />
+                        onChange={ (e) => updateIdea(i, 'title', e.target.value)} />
                     </h2>
                     <button
                       className="remove"
@@ -41,15 +40,16 @@ const IdeasList = (props) => {
                   <ContentEditable
                     html={ idea.body }
                     disabled={ false }
-                    onChange={ (e) => updateIdea(i, idea['body'] = e.target.value)} />
+                    onChange={ (e) => updateIdea(i, 'body', e.target.value)} />
                   <footer>
                     <button
                       className="up"
-                      onClick={ () => updateIdea(i, idea['quality'] = upvote(idea.quality))}>&uarr;
+                      onClick={ () => updateIdea(i, 'quality', upvote(idea.quality))}>&uarr;
                     </button>
                     <button
                       className="down"
-                      onClick={ () => updateIdea(i, idea['quality'] = downvote(idea.quality))}>&darr;</button>
+                      onClick={ () => updateIdea(i, 'quality', downvote(idea.quality))}>&darr;
+                    </button>
                     <p>quality: <span>{idea.quality}</span> </p>
                   </footer>
                 </li>

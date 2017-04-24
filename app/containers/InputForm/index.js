@@ -3,6 +3,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { reset } from 'redux-form';
 
 import InputForm from 'components/InputForm';
 import { addIdea, removeIdea, updateIdea } from '../App/actions';
@@ -20,8 +21,8 @@ const mapDispatchToProps = dispatch => {
     removeIdea: (index) => {
       dispatch(removeIdea(index));
     },
-    updateIdea: (index, ideaObject) => {
-      dispatch(updateIdea(index, ideaObject));
+    updateIdea: (index, key, value) => {
+      dispatch(updateIdea(index, key, value));
     }
   };
 };
