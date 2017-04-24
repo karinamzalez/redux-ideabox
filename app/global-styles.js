@@ -90,7 +90,7 @@ injectGlobal`
   }
 
   .remove {
-      background: grey;
+      background: #d5d6d7;
       color: white;
       border: none;
       display: inline;
@@ -114,21 +114,24 @@ injectGlobal`
     display: flex;
     flex-direction: row;
     padding-bottom: 20px;
+    padding-top: 20px;
   }
 
   .down:hover {
-    background-color: gold;
+    background-color: #fdbd2c;
   }
 
   .up:hover {
-    background-color: green;
+    background-color: #1BCD00;
   }
 
   footer button {
-    background: grey;
+    background: #d5d6d7;
     color: white;
     display: inline-block;
     float: left;
+    width: 30px;
+    height: 30px;
     border-radius: 50px;
     margin-right: 20px;
   }
