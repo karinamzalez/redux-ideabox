@@ -94,6 +94,7 @@ injectGlobal`
       border: none;
       display: inline;
       float: right;
+      margin-top: -2em;
       height: 30px;
       justify-content: right;
       width: 30px;

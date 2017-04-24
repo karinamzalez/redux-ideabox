@@ -4,7 +4,7 @@ import React, { PropTypes, Component } from 'react';
 import Wrapper from './Wrapper.js';
 import IdeasList from '../IdeasList';
 
-export default class InputForm extends React.Component{
+export default class InputForm extends React.Component {
   constructor(){
     super();
     this.state = {
@@ -48,7 +48,8 @@ export default class InputForm extends React.Component{
             </button>
           </form>
         </Wrapper>
-        <IdeasList ideas={ this.props.ideas } removeIdea={ this.props.removeIdea } />
+        <IdeasList ideas={ this.props.ideas } removeIdea={ this.props.removeIdea }
+        updateIdea={ this.props.updateIdea } />
       </div>
     );
   }
@@ -57,4 +58,5 @@ export default class InputForm extends React.Component{
 InputForm.PropTypes = {
   addIdea: React.PropTypes.func,
   removeIdea: React.PropTypes.func,
+  updateIdea: React.PropTypes.func,
 }
