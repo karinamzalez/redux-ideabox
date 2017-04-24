@@ -28,8 +28,13 @@ export default class InputForm extends React.Component {
       id: Date.now()
     };
     this.props.addIdea(ideaObject);
+    this.clearFields();
   }
 
+  clearFields(){
+    this.setState({titleString: '', bodyString: ''});
+  }
+  
   render(){
     return (
       <div>
@@ -37,10 +42,11 @@ export default class InputForm extends React.Component {
           <h1>idea<span>box</span></h1>
           <form name="ideaForm">
             <input type="text" id="idea-title"
+            value={this.state.titleString}
             placeholder=" title" onChange={ (e) => this.setIdeaState('titleString', e.target.value) } />
             <br />
             <input type="text" id="idea-body"
-            placeholder=" body" onChange={(e) => this.setIdeaState('bodyString', e.target.value)}/>
+            placeholder=" body" value={this.state.bodyString} onChange={(e) => this.setIdeaState('bodyString', e.target.value)}/>
             <br />
             <button className="submit-btn"
             onClick={(e) => this.createIdea(e)}>
