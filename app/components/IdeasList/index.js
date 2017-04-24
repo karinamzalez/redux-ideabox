@@ -5,9 +5,7 @@ import ContentEditable from 'react-contenteditable';
 
 import Ul from './Ul';
 
-const IdeasList = (props) => {
-  const { ideas, removeIdea, updateIdea } = props;
-
+const IdeasList = ({ ideas, removeIdea, updateIdea }) => {
   const upvote = (quality) => {
     return quality === 'swill' ? 'good' : 'great';
   };
@@ -44,7 +42,7 @@ const IdeasList = (props) => {
                       <button className="down"
                         onClick={ () => updateIdea(i, 'quality', downvote(idea.quality))}>&darr;
                       </button>
-                      <p>quality: {idea.quality } </p>
+                      <p>quality: <span>{ idea.quality }</span> </p>
                     </footer>
                   </li> })
         : ""

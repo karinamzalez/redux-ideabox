@@ -20,11 +20,15 @@ export const removeIdea = (index) => {
 };
 
 export const updateIdea = (index, key, value) => {
-  console.log(value);
-  return {
+  return value ? {
     type: UPDATE_IDEA,
     index: index,
     key: key,
     value: value,
+  } : {
+    type: UPDATE_IDEA,
+    index: index,
+    key: key,
+    value: ' ',
   };
 };

@@ -2,7 +2,7 @@
 import React, { PropTypes, Component } from 'react';
 
 import Wrapper from './Wrapper.js';
-import IdeasList from '../IdeasList';
+import IdeasList from '../../containers/IdeasList';
 
 export default class InputForm extends React.Component {
   constructor(){
@@ -56,9 +56,7 @@ export default class InputForm extends React.Component {
             </button>
           </form>
         </Wrapper>
-        <IdeasList ideas={ this.props.ideas }
-          removeIdea={ this.props.removeIdea }
-          updateIdea={ this.props.updateIdea } />
+        <IdeasList />
       </div>
     );
   }
