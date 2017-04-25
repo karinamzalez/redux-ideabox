@@ -1,4 +1,14 @@
 // makeSelectLocationState expects a plain JS object for the routing state
+/*jshint esversion: 6 */
+import { createSelector } from 'reselect';
+
+const selectGlobal = (state) => state.get('global');
+
+const makeSelectIdeas = () => createSelector(
+  selectGlobal,
+  (globalState) => globalState.get('ideas').toJS()
+);
+
 const makeSelectLocationState = () => {
   let prevRoutingState;
   let prevRoutingStateJS;
@@ -16,5 +26,7 @@ const makeSelectLocationState = () => {
 };
 
 export {
+  selectGlobal,
   makeSelectLocationState,
+  makeSelectIdeas,
 };

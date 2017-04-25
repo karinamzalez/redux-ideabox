@@ -1,6 +1,7 @@
 /**
  * Create the store with asynchronously loaded reducers
  */
+ /*jshint esversion: 6 */
 
 import { createStore, applyMiddleware, compose } from 'redux';
 import { fromJS } from 'immutable';

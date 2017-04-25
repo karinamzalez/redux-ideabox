@@ -8,17 +8,23 @@
  * reloading is not a necessity for you then you can refactor it and remove
  * the linting exception.
  */
+ /*jshint esversion: 6 */
 
-import React from 'react';
+import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
-import messages from './messages';
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+import messages from './messages';
+import InputFormContainer from 'containers/InputForm';
+
+
+class HomePage extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <div>
+        <InputFormContainer />
+      </div>
     );
   }
 }
+
+export default HomePage;

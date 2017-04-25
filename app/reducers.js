@@ -2,13 +2,14 @@
  * Combine all reducers in this file and export the combined reducers.
  * If we were to do this in store.js, reducers wouldn't be hot reloadable.
  */
+ /*jshint esversion: 6 */
 
 import { combineReducers } from 'redux-immutable';
 import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
-
+import globalReducer from 'containers/App/reducer';
 /*
  * routeReducer
  *
@@ -43,6 +44,7 @@ function routeReducer(state = routeInitialState, action) {
 export default function createReducer(asyncReducers) {
   return combineReducers({
     route: routeReducer,
+    global: globalReducer,
     language: languageProviderReducer,
     ...asyncReducers,
   });
