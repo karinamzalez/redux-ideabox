@@ -8,45 +8,35 @@ import {
 export const addIdea = (ideaObject) => {
   return {
     type: ADD_IDEA,
-    ideaObject: ideaObject
+    payload: {
+      ideaObject: ideaObject
+    }
   };
 };
 
 export const removeIdea = (index) => {
   return {
     type: REMOVE_IDEA,
-    index: index,
+    payload: {
+      index: index
+    }
   };
 };
 
-export const updateIdea = (index, key, value) => {
+export const updateIdea = ({ index, key, value }) => {
   return value ? {
     type: UPDATE_IDEA,
-    index: index,
-    key: key,
-    value: value,
+    payload: {
+      index: index,
+      key: key,
+      value: value,
+    }
   } : {
     type: UPDATE_IDEA,
-    index: index,
-    key: key,
-    value: ' ',
+    payload: {
+      index: index,
+      key: key,
+      value: ' ',
+    }
   };
 };
-
-
-
-// export const updateIdea = ({ index, key, value }) => {
-//   return value ? {
-//     type: UPDATE_IDEA,
-//     payload: {
-//       index: index,
-//       key: key,
-//       value: value,
-//     }
-//   } : {
-//     type: UPDATE_IDEA,
-//     index: index,
-//     key: key,
-//     value: ' ',
-//   };
-// };

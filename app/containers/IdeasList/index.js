@@ -18,7 +18,7 @@ const mapDispatchToProps = dispatch => {
       dispatch(removeIdea(index));
     },
     updateIdea: (index, key, value) => {
-      dispatch(updateIdea(index, key, value));
+      dispatch(updateIdea({index, key, value}));
     },
   };
 };

@@ -4,7 +4,7 @@ import React, { PropTypes, Component } from 'react';
 import Wrapper from './Wrapper.js';
 import IdeasList from 'containers/IdeasList';
 
-export default class InputForm extends React.Component {
+export default class InputForm extends Component {
   constructor(){
     super();
     this.state = {

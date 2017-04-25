@@ -5,7 +5,7 @@ import ContentEditable from 'react-contenteditable';
 
 const IdeaHeader = ({ idea, i, updateIdea, removeIdea }) => {
   return (
-    <header>
+    <div>
       <h2>
         <ContentEditable
           html={ idea.title }
@@ -19,11 +19,15 @@ const IdeaHeader = ({ idea, i, updateIdea, removeIdea }) => {
         className="body"
         disabled={ false }
         onChange={ (e) => updateIdea(i, 'body', e.target.value)} />
-    </header>
+    </div>
   );
 };
 
 IdeaHeader.PropTypes = {
+  idea: PropTypes.object.isRequired,
+  i: PropTypes.number.isRequired,
+  updateIdea: PropTypes.func.isRequired,
+  removeIdea: PropTypes.func.isRequired
 }
 
 export default IdeaHeader;

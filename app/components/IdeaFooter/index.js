@@ -24,4 +24,10 @@ const IdeaFooter = ({ idea, i, updateIdea }) => {
   );
 };
 
+IdeaFooter.PropTypes = {
+  idea: PropTypes.object.isRequired,
+  i: PropTypes.number.isRequired,
+  updateIdea: PropTypes.func.isRequired
+}
+
 export default IdeaFooter;

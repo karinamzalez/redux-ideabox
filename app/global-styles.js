@@ -67,16 +67,6 @@ injectGlobal`
     background: #045e55;
   }
 
-  li {
-      justify-content: center;
-      max-width: 500px;
-      width: 100%;
-  }
-
-  li header {
-      margin-top: 25px;
-  }
-
   li h2 {
       color: #6d6e71;
       display: inline;

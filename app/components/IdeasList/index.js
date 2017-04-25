@@ -6,6 +6,7 @@ import ContentEditable from 'react-contenteditable';
 import IdeaHeader from 'components/IdeaHeader';
 import IdeaFooter from 'components/IdeaFooter';
 import Ul from './Ul';
+import Idea from './Idea';
 
 const IdeasList = ({ ideas, removeIdea, updateIdea }) => {
   return (
@@ -16,10 +17,10 @@ const IdeasList = ({ ideas, removeIdea, updateIdea }) => {
 
           const ideaProps = { idea, i, updateIdea, removeIdea }
 
-          return  <li key={i}>
+          return  <Idea key={i}>
                     <IdeaHeader { ...ideaProps } />
                     <IdeaFooter { ...ideaProps } />
-                  </li> })
+                  </Idea> })
         : ""
       }
     </Ul>

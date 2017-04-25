@@ -15,20 +15,12 @@ const ideas = (state = initialState, action) => {
   switch (action.type) {
     case ADD_IDEA:
       return state
-        .set('ideas', state.get('ideas').push(action.ideaObject));
+        .set('ideas', state.get('ideas').push(action.payload.ideaObject));
     case REMOVE_IDEA:
       return state
-        .set('ideas', state.get('ideas').delete(action.index));
+        .set('ideas', state.get('ideas').delete(action.payload.index));
     case UPDATE_IDEA:
-      // type /payload ---> { type: "lol", payload: { index: 1, value: "lol", value: "hdhd" }
-
-      const val = state.get('ideas').get(action.index)[action.key] = action.value;
-      const lol = state.set('ideas', val);
-
-      console.log('value:', val);
-      console.log('state update:', lol);
-
-      return lol;
+      state.get('ideas').get(action.payload.index)[action.payload.key] = action.payload.value;
     default:
       return state;
   }
