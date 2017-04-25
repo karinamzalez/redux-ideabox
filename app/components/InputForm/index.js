@@ -2,7 +2,7 @@
 import React, { PropTypes, Component } from 'react';
 
 import Wrapper from './Wrapper.js';
-import IdeasList from '../../containers/IdeasList';
+import IdeasList from 'containers/IdeasList';
 
 export default class InputForm extends React.Component {
   constructor(){
@@ -49,10 +49,10 @@ export default class InputForm extends React.Component {
             <input type="text" id="idea-body"
               placeholder=" body"
               value={this.state.bodyString}
-              onChange={(e) => this.setIdeaState('bodyString', e.target.value)}/>
+              onChange={ (e) => this.setIdeaState('bodyString', e.target.value) } />
             <br />
             <button className="submit-btn"
-              onClick={(e) => this.createIdea(e)}>Save
+              onClick={ (e) => this.createIdea(e) }>Save
             </button>
           </form>
         </Wrapper>
@@ -63,7 +63,5 @@ export default class InputForm extends React.Component {
 }
 
 InputForm.PropTypes = {
-  addIdea: React.PropTypes.func,
-  removeIdea: React.PropTypes.func,
-  updateIdea: React.PropTypes.func,
+  addIdea: React.PropTypes.func.isRequired,
 }

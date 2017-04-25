@@ -32,3 +32,21 @@ export const updateIdea = (index, key, value) => {
     value: ' ',
   };
 };
+
+
+
+// export const updateIdea = ({ index, key, value }) => {
+//   return value ? {
+//     type: UPDATE_IDEA,
+//     payload: {
+//       index: index,
+//       key: key,
+//       value: value,
+//     }
+//   } : {
+//     type: UPDATE_IDEA,
+//     index: index,
+//     key: key,
+//     value: ' ',
+//   };
+// };

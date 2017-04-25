@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import { fromJS, List } from 'immutable';
+import { fromJS, setIn, Map } from 'immutable';
 
 import {
   ADD_IDEA,
@@ -20,8 +20,15 @@ const ideas = (state = initialState, action) => {
       return state
         .set('ideas', state.get('ideas').delete(action.index));
     case UPDATE_IDEA:
-        state
-        .set('ideas',  state.get('ideas').get(action.index)[action.key] = action.value);
+      // type /payload ---> { type: "lol", payload: { index: 1, value: "lol", value: "hdhd" }
+
+      const val = state.get('ideas').get(action.index)[action.key] = action.value;
+      const lol = state.set('ideas', val);
+
+      console.log('value:', val);
+      console.log('state update:', lol);
+
+      return lol;
     default:
       return state;
   }

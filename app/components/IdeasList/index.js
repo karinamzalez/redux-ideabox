@@ -3,9 +3,11 @@
 import React, { PropTypes } from 'react';
 import ContentEditable from 'react-contenteditable';
 
+import IdeaHeader from 'components/IdeaHeader';
 import Ul from './Ul';
 
 const IdeasList = ({ ideas, removeIdea, updateIdea }) => {
+
   const upvote = (quality) => {
     return quality === 'swill' ? 'good' : 'great';
   };
@@ -19,18 +21,14 @@ const IdeasList = ({ ideas, removeIdea, updateIdea }) => {
       {
         ideas.length ?
         ideas.map((idea, i) => {
+          const ideaComponentProps = {
+            idea,
+            i,
+            updateIdea,
+            removeIdea
+          }
           return  <li key={i}>
-                    <header>
-                      <h2>
-                        <ContentEditable
-                          html={ idea.title }
-                          disabled={ false }
-                          onChange={ (e) => updateIdea(i, 'title', e.target.value)} />
-                      </h2>
-                      <button className="remove"
-                        onClick={ () => removeIdea(i) }>X
-                      </button>
-                    </header>
+                    // <IdeaHeader { ...ideaComponentProps } />
                     <ContentEditable
                       html={ idea.body }
                       disabled={ false }
@@ -52,9 +50,9 @@ const IdeasList = ({ ideas, removeIdea, updateIdea }) => {
 };
 
 IdeasList.PropTypes = {
-  ideas: React.PropTypes.array,
-  removeIdea: React.PropTypes.func,
-  updateIdea: React.PropTypes.func,
+  ideas: PropTypes.array.isRequired,
+  removeIdea: PropTypes.func.isRequired,
+  updateIdea: PropTypes.func.isRequired,
 }
 
 export default IdeasList;
