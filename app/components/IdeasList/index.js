@@ -1,7 +1,6 @@
 /*jshint esversion: 6 */
 
 import React, { PropTypes } from 'react';
-import ContentEditable from 'react-contenteditable';
 
 import IdeaHeader from 'components/IdeaHeader';
 import IdeaFooter from 'components/IdeaFooter';

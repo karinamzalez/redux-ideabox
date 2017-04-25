@@ -56,6 +56,7 @@ export default class InputForm extends Component {
             </button>
           </form>
         </Wrapper>
+        
         <IdeasList />
       </div>
     );

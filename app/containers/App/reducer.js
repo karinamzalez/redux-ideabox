@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import { fromJS, setIn, Map, getIn } from 'immutable';
+import { fromJS, setIn, getIn } from 'immutable';
 
 import {
   ADD_IDEA,
