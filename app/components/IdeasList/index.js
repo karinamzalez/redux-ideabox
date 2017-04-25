@@ -28,7 +28,7 @@ const IdeasList = ({ ideas, removeIdea, updateIdea }) => {
             removeIdea
           }
           return  <li key={i}>
-                    // <IdeaHeader { ...ideaComponentProps } />
+                    <IdeaHeader { ...ideaComponentProps } />
                     <ContentEditable
                       html={ idea.body }
                       disabled={ false }

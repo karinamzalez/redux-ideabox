@@ -3,14 +3,14 @@
 import React, { PropTypes } from 'react';
 import ContentEditable from 'react-contenteditable';
 
-const IdeaHeader = ({ idea }) => {
+const IdeaHeader = ({ idea, i, updateIdea, removeIdea }) => {
   return (
     <div>
       <h2>
         <ContentEditable
           html={ idea.title }
           disabled={ false }
-          onChange{ (e) => updateIdea(i, 'title', e.target.value) }/>
+          onChange={ (e) => updateIdea(i, 'title', e.target.value) }/>
       </h2>
       <button className="remove"
         onClick={ () => removeIdea(i) }>x</button>
@@ -18,4 +18,7 @@ const IdeaHeader = ({ idea }) => {
   );
 };
 
-export default Header;
+IdeaHeader.PropTypes = {
+}
+
+export default IdeaHeader;
