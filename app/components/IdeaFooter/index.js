@@ -2,8 +2,7 @@
 
 import React, { PropTypes } from 'react';
 
-const IdeaFooter = ({ idea, i, updateIdea, removeIdea}) => {
-
+const IdeaFooter = ({ idea, i, updateIdea }) => {
   const upvote = (quality) => {
     return quality === 'swill' ? 'good' : 'great';
   };
@@ -13,7 +12,7 @@ const IdeaFooter = ({ idea, i, updateIdea, removeIdea}) => {
   };
 
   return (
-    <div>
+    <footer>
       <button className="up"
         onClick={ () => updateIdea(i, 'quality', upvote(idea.quality))}>&uarr;
       </button>
@@ -21,8 +20,8 @@ const IdeaFooter = ({ idea, i, updateIdea, removeIdea}) => {
         onClick={ () => updateIdea(i, 'quality', downvote(idea.quality))}>&darr;
       </button>
       <p>quality: <span>{ idea.quality }</span> </p>
-    </div>
-  )
+    </footer>
+  );
 };
 
 export default IdeaFooter;

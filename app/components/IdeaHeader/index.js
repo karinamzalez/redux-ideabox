@@ -5,7 +5,7 @@ import ContentEditable from 'react-contenteditable';
 
 const IdeaHeader = ({ idea, i, updateIdea, removeIdea }) => {
   return (
-    <div>
+    <header>
       <h2>
         <ContentEditable
           html={ idea.title }
@@ -14,7 +14,12 @@ const IdeaHeader = ({ idea, i, updateIdea, removeIdea }) => {
       </h2>
       <button className="remove"
         onClick={ () => removeIdea(i) }>x</button>
-    </div>
+      <ContentEditable
+        html={ idea.body }
+        className="body"
+        disabled={ false }
+        onChange={ (e) => updateIdea(i, 'body', e.target.value)} />
+    </header>
   );
 };
 

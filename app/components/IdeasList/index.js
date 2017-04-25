@@ -18,10 +18,6 @@ const IdeasList = ({ ideas, removeIdea, updateIdea }) => {
 
           return  <li key={i}>
                     <IdeaHeader { ...ideaProps } />
-                    <ContentEditable
-                      html={ idea.body }
-                      disabled={ false }
-                      onChange={ (e) => updateIdea(i, 'body', e.target.value)} />
                     <IdeaFooter { ...ideaProps } />
                   </li> })
         : ""

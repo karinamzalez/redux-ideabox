@@ -82,9 +82,10 @@ injectGlobal`
       display: inline;
       font-size: 1.5em;
       font-weight: 700;
+      margin-bottom: 1em;
   }
 
-  li p {
+  .body {
       color: #939598;
       margin: 15px 0px;
   }
@@ -114,7 +115,6 @@ injectGlobal`
     display: flex;
     flex-direction: row;
     padding-bottom: 20px;
-    padding-top: 20px;
   }
 
   .down:hover {
