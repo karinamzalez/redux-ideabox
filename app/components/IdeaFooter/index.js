@@ -3,6 +3,7 @@
 import React, { PropTypes } from 'react';
 
 const IdeaFooter = ({ idea, i, updateIdea }) => {
+
   const upvote = (quality) => {
     return quality === 'swill' ? 'good' : 'great';
   };
