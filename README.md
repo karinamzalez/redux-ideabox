@@ -5,7 +5,7 @@ Stoiber. For more information see `LICENSE.md`.
 
 # redux-ideabox (CRUD app)
 
-###functionality includes:
+### functionality includes:
 * add ideas
 * read ideas
 * remove ideas
